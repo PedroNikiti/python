@@ -1,0 +1,54 @@
+nome_usuario = ("")
+
+saldo = [0]
+
+historico = [""]
+
+historicoo = [""]
+
+nome = input("Insira o nome do titular da conta: \n")
+nome_tupla = nome_usuario + nome
+
+while True:
+    menu = input("Que deseja fazer \n1-Deposito \n2-Saque \n3-Saldo \n4-Historico \n5-Sair \n")
+    if(menu == "1"):
+        deposito_cliente = input("Deposite o valor desejado: \n")
+        deposito = deposito_cliente.replace(".","",1)
+
+        if (deposito.isdigit()):
+            if(deposito >= "0"):
+                deposito = float(deposito)
+                saldo[0] += deposito
+                print(f"Seu saldo atual é R${saldo[0]}")
+            else:
+                print("Valor inválido tente novamente")
+        else:
+            print("Valor inválido tente novamente")
+    elif(menu == "2"):
+        saque_cliente = input("Saque o valor desejado: \n")
+        saque = saque_cliente.replace(".","",1)
+
+        if (saque.isdigit()):
+            saque = float(saque)
+            if(saldo[0] < saque):
+                print("Ação inválida tente novamente") 
+            elif(saque > 0):
+                saldo[0] = saldo[0] - saque
+                print(f"Seu saldo atual é R${saldo[0]}")
+            else:
+                print("Valor inválido tente novamente")
+        else:
+            print("Valor inválido tente novamente")        
+    elif(menu == "3"):
+        print(f"Seu saldo atual é de R${saldo[0]}")
+    elif(menu == "4"):
+        print("Historico de transações:")
+        historico = saque
+        historicoo = deposito
+        print(f"Seu saque foi de R${historico}")
+        print(f"Seu deposito foi de R${historicoo}")
+    elif(menu == "5"):
+        print("Conta encerrada")
+        break
+    else:
+        print("Ação inválida tente um dos quatros numeros")

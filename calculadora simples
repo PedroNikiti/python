@@ -28,6 +28,6 @@ elif(menu_calculadora == "4"):
     def divisao(valor_um,valor_dois):
         return valor_um / valor_dois
 
-    print(divisao(nemuro01,numero02))
+    print(divisao(numero01,numero02))
 else:
     print("Se é burro só tem quatro opções")

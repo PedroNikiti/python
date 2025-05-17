@@ -1,0 +1,33 @@
+numero01 = int(input("Digite um numero que você desejar: \n"))
+
+numero02 = int(input("Digite um outro ou o mesmo numero que você desejar: \n"))
+
+menu_calculadora = input("Agora escolha a forma que quer calcular: \n1-Somar \n2-Subtração \n3-Multiplicação \n4-Divisão \n")
+
+
+if(menu_calculadora == "1"):
+    
+    def soma(valor_um,valor_dois):
+        return valor_um + valor_dois 
+    
+    print(soma(numero01,numero02))
+elif(menu_calculadora == "2"):
+
+    def subtraçao(valor_um,valor_dois):
+        return valor_um - valor_dois
+
+    print(subtraçao(numero01,numero02))
+elif(menu_calculadora == "3"):
+    
+    def multiplicaçao(valor_um,valor_dois):
+        return valor_um * valor_dois
+
+    print(multiplicaçao(numero01,numero02))
+elif(menu_calculadora == "4"):
+
+    def divisao(valor_um,valor_dois):
+        return valor_um / valor_dois
+
+    print(divisao(nemuro01,numero02))
+else:
+    print("Se é burro só tem quatro opções")

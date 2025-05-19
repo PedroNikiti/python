@@ -24,10 +24,12 @@ elif(menu_calculadora == "3"):
 
     print(multiplicaçao(numero01,numero02))
 elif(menu_calculadora == "4"):
+    if (valor_dois == 0):
+        print("Não é possivel divisão por zero.")
+    else:
+        def divisao(valor_um,valor_dois):
+            return valor_um / valor_dois
 
-    def divisao(valor_um,valor_dois):
-        return valor_um / valor_dois
-
-    print(divisao(numero01,numero02))
+        print(divisao(numero01,numero02))
 else:
     print("Se é burro só tem quatro opções")
